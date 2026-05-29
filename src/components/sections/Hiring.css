@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.hiringSection {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.hiringContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hiring Partners */
+.hiringTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 140px;
+}
+
+.hiringBadge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #333;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  border: 1px solid #e5e5e5;
+}
+
+.hiringMarqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Add a fade effect on edges */
+.hiringMarqueeWrapper::before,
+.hiringMarqueeWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hiringMarqueeWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.hiringMarqueeWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.hiringMarqueeTrack {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  animation: scrollLeftToRight 30s linear infinite;
+  padding: 0 50px;
+  width: max-content;
+}
+
+@keyframes scrollLeftToRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.hiringLogo {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.hiringLogo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* FAQ Section */
+.faqWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.faqLeft {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.faqLeft .hiringBadge {
+  margin-bottom: 24px;
+}
+
+.faqTitle {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.faqDesc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+}
+
+.faqBtn {
+  background-color: #f05023;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.faqBtn:hover {
+  opacity: 0.9;
+}
+
+.faqRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: #dcdcdc;
+}
+
+.faqItem.open {
+  border-color: #eaeaea;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.faqIcon {
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faqItem.open .faqIcon {
+  color: #f05023;
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+}
+
+.faqItem.open .faqAnswer {
+  max-height: 200px;
+  margin-top: 16px;
+}
+
+.faqAnswer p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .faqWrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .faqLeft {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .faqRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiringSection {
+    padding: 60px 16px;
+  }
+  
+  .hiringTop {
+    margin-bottom: 80px;
+  }
+  
+  .hiringMarqueeTrack {
+    gap: 50px;
+  }
+  
+  .hiringLogo {
+    height: 25px;
+  }
+  
+  .faqTitle {
+    font-size: 28px;
+  }
+  
+  .faqQuestion {
+    font-size: 14px;
+  }
+  
+  .faqItem {
+    padding: 16px;
+  }
+}

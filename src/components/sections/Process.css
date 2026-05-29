@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.processSection {
+  font-family: 'Inter', sans-serif;
+  padding: 80px 20px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.processGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: linear-gradient(180deg, #e6d8ff 0%, #ffd9cc 55%, #ffffff 100%);
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.processGridBackground {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 55px 55px;
+  z-index: 1;
+}
+
+.processContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.processHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.processBadge {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.processTitle {
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.processSubtitle {
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.processContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 500px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: row;
+  min-height: 50px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: opacity 0.2s ease;
+}
+
+.stepItem:hover {
+  opacity: 0.8;
+}
+
+.activeStep {
+  opacity: 1;
+}
+
+.stepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.stepNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #ffffff;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.activeStep .stepNumber {
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.stepLine {
+  width: 3px;
+  flex: 1;
+  background-color: #ff5722;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.stepDetails {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  flex: 1;
+}
+
+.stepTitleWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.activeStep .stepTitleWrapper {
+  gap: 8px;
+  color: #ff5722;
+  padding: 6px 14px;
+}
+
+.stepDescriptionWrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.activeStep .stepDescriptionWrapper {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.stepDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+.stepIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.processVisual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ideateCardContainer {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin-left: 20px;
+}
+
+.ideateCardFront {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 16px;
+  z-index: 3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  min-height: 260px;
+}
+
+.ideateCardLeft {
+  flex: 1.1;
+  position: relative;
+  z-index: 2;
+}
+
+.ideateCardRight {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.ideateCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ideateCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #111;
+}
+
+.ideateCardBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border: 1px solid #eaeaea;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+}
+
+.ideateCardText {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 180px;
+  margin: 0;
+}
+
+.ideateIllustration {
+  width: 220px;
+  height: auto;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.floatingTag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  margin-left: 25px;
+}
+
+.tagBrainstorming {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  top: 130px;
+  left: 60px;
+}
+
+.tagPlanning {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #f0f0f0;
+  top: 170px;
+  left: 80px;
+}
+
+.tagQuestion {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #ff3b30;
+  border: 1px solid #f0f0f0;
+  top: 90px;
+  left: 175px;
+  font-weight: bold;
+}
+
+.tagSparkles {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  bottom: 30px;
+  left: 140px;
+  font-size: 14px;
+}
+
+.tagCreative {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #f0f0f0;
+  bottom: 15px;
+  left: 180px;
+}
+
+.imageShadow {
+  position: absolute;
+  top: 12px;
+  left: -12px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaeaea;
+}
+
+.imageShadow2 {
+  position: absolute;
+  top: 24px;
+  left: -24px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaeaea;
+}
+
+@media (max-width: 768px) {
+  .processTitle {
+    font-size: 28px;
+  }
+  
+  .processContent {
+    flex-direction: column-reverse;
+  }
+  
+  .processSteps {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .processVisual {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .ideateCardContainer {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .ideateCardFront {
+    overflow: hidden;
+    min-height: 200px;
+    padding: 16px;
+  }
+
+  .ideateIllustration {
+    width: 150px;
+    right: -5px;
+  }
+
+  .floatingTag {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin-left: 0;
+  }
+
+  .tagBrainstorming {
+    top: auto;
+    bottom: 60px;
+    left: 10px;
+  }
+
+  .tagPlanning {
+    top: auto;
+    bottom: 20px;
+    left: 10px;
+  }
+
+  .tagQuestion {
+    width: 22px;
+    height: 22px;
+    top: 16px;
+    left: auto;
+    right: 10px;
+  }
+
+  .tagSparkles {
+    width: 22px;
+    height: 22px;
+    bottom: 16px;
+    left: auto;
+    right: 10px;
+  }
+
+  .tagCreative {
+    bottom: 52px;
+    left: auto;
+    right: 10px;
+  }
+  
+  .imageShadow {
+    top: 8px;
+    left: -8px;
+  }
+  
+  .imageShadow2 {
+    top: 16px;
+    left: -16px;
+  }
+}

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.successSection {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.successGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1000px;
+  background: linear-gradient(180deg, #e6d8ff 0%, #ffd9cc 55%, #ffffff 100%);
+  filter: blur(200px);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.successGridBackground {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+  z-index: 1;
+}
+
+.successContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successHeaderTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.successBadge {
+  background-color: #ffffff;
+  color: #333;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid #e5e5e5;
+}
+
+.successSubtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.successHeaderMain {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 0 40px;
+}
+
+.successTitle {
+  font-size: 68px;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+.successHeaderRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.successAvatars {
+  display: flex;
+}
+
+.avatarCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  margin-left: -12px;
+}
+
+.avatarCircle:first-child {
+  margin-left: 0;
+}
+
+.successAvatarsText {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin: 0;
+}
+
+.successCards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.storyCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: calc(33.333% - 16px);
+  min-width: 300px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.storyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.storyText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.storyFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.storyAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storyName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.storyRole {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.storyAuthorImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.successAction {
+  display: flex;
+  justify-content: center;
+}
+
+.successBtn {
+  background-color: #f05023;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.successBtn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .storyCard {
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .successSection {
+    padding: 60px 16px;
+  }
+  
+  .successHeaderMain {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 0;
+  }
+  
+  .successTitle {
+    font-size: 32px;
+  }
+  
+  .successHeaderRight {
+    align-items: center;
+  }
+  
+  .storyCard {
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+}

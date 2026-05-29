@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.techSection {
+  font-family: 'Inter', sans-serif;
+  padding: 100px 20px;
+  background-color: #1a1721;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.techBackground {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+  z-index: 1;
+}
+
+.techContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.techHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.techBadge {
+  background-color: #ffffff;
+  color: #111111;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.techTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.techSubtitle {
+  font-size: 16px;
+  color: #a1a1aa;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.techTabsWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.techTabsMenu {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  max-width: 100%;
+}
+
+.techTabBtn {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.techTabBtn:hover {
+  color: #ffffff;
+}
+
+.activeTechTab {
+  background: #ffffff;
+  color: #111111;
+  font-weight: 600;
+}
+
+.activeTechTab:hover {
+  color: #111111;
+}
+
+.techContentBoxWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.techContentBox {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 50px;
+  max-width: 750px;
+  width: 100%;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+.techContentHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.techContentIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.techContentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.techContentDesc {
+  color: #a1a1aa;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.techItemBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.techItemBadge:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.techItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.techAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.techPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.techPrimaryBtn:hover {
+  background-color: #e64a19;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(230, 74, 25, 0.3);
+}
+
+@media (max-width: 768px) {
+  .techSection {
+    padding: 60px 20px;
+  }
+  
+  .techTitle {
+    font-size: 32px;
+  }
+  
+  .techTabsMenu {
+    border-radius: 20px;
+    padding: 12px;
+    gap: 8px;
+    background-color: transparent;
+  }
+  
+  .techTabBtn {
+    padding: 8px 16px;
+    border-radius: 999px;
+  }
+  
+  .techContentBox {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  
+  .techContentTitle {
+    font-size: 20px;
+  }
+  
+  .techContentDesc {
+    font-size: 15px;
+  }
+  
+  .techItemBadge {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

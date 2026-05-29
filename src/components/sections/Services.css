@@ -1,0 +1,274 @@
+.servicessection {
+    padding: 100px 20px;
+    text-align: center;
+    background: #12101a;
+    position: relative;
+    overflow: hidden;
+}
+
+.servicessection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+    background-size: 55px 55px;
+}
+
+.servicebadge{
+display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #d9d9d9;
+
+    margin-bottom: 35px;
+}
+
+.servicetag {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: white;
+    color: #111;
+    font-size: 14px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.servicetitle {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.servicetabs {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.servicetabs button {
+    border: none;
+    background: transparent;
+    color: #cfcfcf;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.servicetabs .activebtn {
+    background: white;
+    color: #111;
+}
+
+.servicecard {
+    width: min(1100px, 90%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    padding: 50px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 2;
+}
+
+.serviceleft {
+    flex: 1;
+    text-align: left;
+}
+
+.serviceleft h3 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.serviceleft p {
+    color: #cfcfcf;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.serviceskills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.serviceskills span {
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.serviceleft a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.serviceright {
+    flex: 1;
+}
+
+.serviceright img {
+    width: 100%;
+    max-width: 380px;
+}
+
+.servicebtn {
+    margin-top: 40px;
+
+    background: #F05023;
+    color: white;
+
+    border: none;
+
+    padding: 18px 35px;
+
+    border-radius: 999px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 2;
+}
+@media (max-width:768px) {
+
+    .servicessection {
+        padding: 80px 20px;
+    }
+
+    .servicetitle {
+        font-size: 34px;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .servicetabs {
+        width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+    }
+
+    .servicetabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .servicetabs button {
+        flex: 1;
+            min-width: 0;
+        
+            padding: 10px 9px;
+        
+            font-size: 11px;
+            font-weight: 500;
+        
+            white-space: nowrap;
+    }
+
+    .servicecard {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+        border-radius: 30px;
+    }
+
+    .serviceleft {
+        width: 100%;
+        text-align: center;
+    }
+
+    .serviceleft h3 {
+        font-size: 42px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .serviceleft p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .serviceskills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .serviceskills span {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .serviceleft a {
+        font-size: 18px;
+    }
+
+    .serviceright {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serviceright img {
+        width: 240px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .servicebtn {
+        width: 100%;
+        margin-top: 30px;
+
+        padding: 16px 20px;
+
+        font-size: 15px;
+    }
+
+}
